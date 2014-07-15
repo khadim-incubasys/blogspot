@@ -13,9 +13,9 @@ class Image_model extends CI_Model {
          $query= $this->db->get('blogPost');
          $maxid=0;
          foreach ($query->result() as $row)
-			{
+			   {
 			    $maxid=$row->id;
-			}
+			   }
          $new_insert_data=array(
              'image_name'=>$name,
               'postid'=> $maxid
@@ -25,7 +25,7 @@ class Image_model extends CI_Model {
     }
     function fetch_images($param)
     {
-        $this->db->order_by("order", "desc");
+        $this->db->order_by("order", "asc");
         $this->db->where('postid', $param); 
         $query = $this->db->get("uploads");
         return $query;

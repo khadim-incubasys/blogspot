@@ -1,4 +1,70 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<form method="post" action="whatever.rb" name="myform" data-validate="parsley">
+  <label for="text-field">Enter text</label>
+  <input type="text" name="text" id="text-field" value="" data-required="true" />
+  
+  <label for="email">Enter email</label>
+  <input name="email" type="email" id="email" value="" data-required="true" data-type="email" />
+
+  <button type="submit" id="submit">Submit</button>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="signUp" method="post" id="register-form" novalidate="novalidate">
+ 
+    <h2>User Registration</h2>
+ 
+    <div id="form-content">
+        <fieldset>
+ 
+            <div class="fieldgroup">
+                <label for="firstname">First Name</label>
+                <input type="text" name="fname"/>
+            </div>
+ 
+            <div class="fieldgroup">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lname"/>
+            </div>
+ 
+            <div class="fieldgroup">
+                <label for="email">Email</label>
+                <input type="text" name="email"/>
+            </div>
+ 
+            <div class="fieldgroup">
+                <label for="password">Password</label>
+                <input type="password" name="pwd"/>
+            </div>
+            <div class="fieldgroup">
+                <label for="password">Confrim Password</label>
+                <input type="password" name="cpwd"/>
+            </div>
+            <div class="fieldgroup">
+                <p class="right">By clicking register you agree to our <a target="_blank" href="/policy">policy</a>.</p>
+                <input type="submit" value="Register" class="submit"/>
+            </div>
+ 
+        </fieldset>
+    </div>
+ 
+        <div class="fieldgroup">
+            <p>Already registered? <a href="index">Sign in</a>.</p>
+        </div>
+</form>
+ -->
+
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -39,7 +105,7 @@
         <div style="clear:both;"></div>
     </div>
 </body>
-</html>
+</html> -->
 
 <!-- sort darg and drop -->
 <!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -140,4 +206,4 @@ $(document).ready(function(){
 
 </body>
 </html> -->
-<!-- end of sort drag drop -->
+<!-- end of sort drag drop

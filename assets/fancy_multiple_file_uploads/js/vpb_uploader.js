@@ -152,7 +152,7 @@ function vpb_multiple_file_uploader(vpb_configuration_settings)
 					}
 					
 					//Assign browsed files to a variable so as to later display them below
-					vpb_added_files_displayer += '<div id="add_fileID'+vpb_file_id+'" align="left" class="'+new_classc+'" style=" margin-left:1px;"><div id="vpb_files_left" class="hove_this_link"><div style="width:360px; float:left;">'+vpb_file_icon+' '+this.vpb_files[i].name.substring(0, 40)+'</div><div style="width:90px; float:left;padding-top:2px;"><span id="uploading_'+vpb_file_id+'"><span class="ready">Ready</span></span></div></div><div id="vpb_files_size_left">'+vpb_actual_fileSize+'</div><div id="vpb_files_time_left">'+vpb_date_last_modified_file+'</div><div id="vpb_files_remove_left"><span id="remove'+vpb_file_id+'"><span class="vpb_files_remove_left_inner" onclick="vpb_remove_this_file(\''+vpb_file_id+'\',\''+this.vpb_files[i].name+'\');">Remove</span></span></div><br clear="all" /></div>';
+					vpb_added_files_displayer += '<div id="add_fileID'+vpb_file_id+'" align="left" class="'+new_classc+'" style=" margin-left:1px;"><div id="vpb_files_left" class="hove_this_link"><div style="width:360px; float:left;">'+vpb_file_icon+' '+this.vpb_files[i].name.substring(0, 40)+'</div><div style="width:90px; float:left;padding-top:2px;"></div><span id="uploading_'+vpb_file_id+'"></span></div><div id="vpb_files_size_left">'+vpb_actual_fileSize+'</div><div id="vpb_files_time_left">'+vpb_date_last_modified_file+'</div><div id="vpb_files_remove_left"><span id="remove'+vpb_file_id+'"><span class="vpb_files_remove_left_inner" onclick="vpb_remove_this_file(\''+vpb_file_id+'\',\''+this.vpb_files[i].name+'\');">Remove</span></span></div><br clear="all" /></div>';
 					
 				}
 			}

@@ -13,10 +13,17 @@ class User extends CI_Controller {
 	}
 	function gotosignup()
 	{
-		$this->load->view('signupview');
+		$this->load->model('Category_model');
+				$data['cat']=$this->Category_model->retrieve_cat();
+
+				$this->load->view('partial/header',$data);
+		         $this->load->view('test_view');
+		       // $this->load->view('signup_view');
+		        $this->load->view('partial/footer');
 	}
 	function signUp()
 	{
+
 		$this->load->model('User_model');
 		//$this->load->helper(array('form', 'url'));
 
@@ -93,7 +100,9 @@ public function fblogin()
 				$data['cat']=$this->Category_model->retrieve_cat();
 
 				$this->load->view('partial/header',$data);
-		        $this->load->view('login',$data);
+		        $this->load->view('login_view',$data);
+		        //$this->load->view('test_view',$data);
+		       // $this->load->view('signup_view');
 		        $this->load->view('partial/footer');
 		   }
 }

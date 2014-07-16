@@ -12,13 +12,9 @@
         
       </div>
       <div class="col-sm-6">
-          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> <a href="http://www.bootply.com">Sir Shakaib Hassan</a></p>      
       </div>
     </div>
   </div>
 </footer>
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
 </html>

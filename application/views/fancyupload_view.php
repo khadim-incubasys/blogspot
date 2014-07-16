@@ -95,8 +95,9 @@ h1 {
   <div id="vpb_file_system_displayer_header">
     <div id="vpb_header_file_names">
       <div style="width:365px; float:left;">File Names</div>
-      <div style="width:90px; float:left;">Status</div>
+     
     </div>
+     <div style="width:90px; float:right;">Status</div>
     <div id="vpb_header_file_size">Size</div>
     <div id="vpb_header_file_last_date_modified">Last Modified</div>
     <br clear="all" />

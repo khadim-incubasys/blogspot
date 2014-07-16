@@ -87,13 +87,14 @@ foreach ($query->result_array() as $row)
 
 	<!-- Uploaded Files Displayer Area -->
 	<div id="vpb_added_files_box" class="vpb_file_upload_main_wrapper" style="margin-left:-25px;"> 
-		<div id="vpb_file_system_displayer_header">
-			<div id="vpb_header_file_names">
-				<div style="width:365px; float:left;">File Names</div>
-				<div style="width:90px; float:left;">Status</div>
+		<div id="vpb_file_system_displayer_header" >
+			<div id="vpb_header_file_names" style="width:362px;">
+				<div style="float:left;"><strong>File Names</strong></div>
+				<!-- <div style=" float:right;">Status</div> -->
 			</div>
-			<div id="vpb_header_file_size">Size</div>
-			<div id="vpb_header_file_last_date_modified">Last Modified</div>
+			<div id="vpb_header_file_size" style="width:99px;">Status</div>
+			<div id="vpb_header_file_size" style="width:93px;">Size</div>
+			<div id="vpb_header_file_last_date_modified"style="width:85px;">Last Modified</div>
 			<br clear="all" />
 		</div>
 		<input type="hidden" id="added_class" value="vpb_blue">
@@ -134,3 +135,6 @@ foreach ($query->result_array() as $row)
 	</div>
 </div>
 <hr>
+
+<script type="text/javascript" src="<?php echo base_url("assets/js/fileupload.js"); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url("assets/fancy_multiple_file_uploads/js/vpb_uploader.js"); ?>"></script>

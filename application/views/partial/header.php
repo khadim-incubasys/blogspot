@@ -18,7 +18,7 @@
 
 <!-- ********** for the file upload  ************-->
 <link rel="stylesheet" href="<?php echo base_url("assets/fancy_multiple_file_uploads/css/vpb_uploader.css"); ?>">
-
+<link rel="stylesheet" href="<?php echo base_url("assets/dynamicCRUD/css/jquery-ui.css"); ?>">
 <!-- ********************************* -->
 
 <!-- parsley validation-->
@@ -34,8 +34,16 @@
 
 <!-- end   -->
 <!-- for drag drop sort -->
-<script type="text/javascript" src="<?php echo base_url("assets/dragsort/jquery-ui-1.9.1.custom.min.js"); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url("assets/dynamicCRUD/js/jquery-ui.js"); ?>"></script>
+
 <!-- end **** -->
+
+<!-- dasboard -->
+  <link rel="stylesheet" href="<?php echo base_url("assets/dashboard/css/layout.css"); ?>" >
+  <script type="text/javascript" src="<?php echo base_url("assets/dashboard/js/hideshow.js"); ?>"></script>
+  <script type="text/javascript" src="<?php echo base_url("assets/dashboard/js/jquery.tablesorter.min.js"); ?>"></script>
+  <script type="text/javascript" src="<?php echo base_url("assets/dashboard/js/jquery.equalHeight.js"); ?>"></script>
+<!--  -->
 
 <!-- for stylish login -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 

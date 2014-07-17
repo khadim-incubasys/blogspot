@@ -56,7 +56,14 @@ class User extends CI_Controller {
 			$this->session->set_userdata('udata', $result);
 	
 			$arr['msg']='Loged In Successfully! . . :)';
-            $arr['url']='welcome/index';
+			if ($result->fname=='khadim') 
+			{
+				 $arr['url']='admin/index';
+			}
+			else
+			{
+				 $arr['url']='welcome/index';
+			}
             $arr['obj']=$this;
             loaderrorshow($arr);
 		}

@@ -29,7 +29,7 @@ class Facebook_model extends CI_Model {
                 $this->session->set_userdata('udata', $result);
                
                 $arr['msg']='Loged In Successfully! . . :)';
-                $arr['url']='welcome/index';
+                $arr['url']='admin/index';
                 $arr['obj']=$this;
                  loaderrorshow($arr);
             } 

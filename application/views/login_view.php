@@ -15,7 +15,7 @@
               </tr>
            
                <p class="clearfix"> 
-            <form class="form-signin" role="form">
+            <!-- <form class="form-signin" role="form"> -->
               <table>
                 <tr>
                   <td><a href="<?= $login_url ?>" class="btn btn-lg btn-primary btn-block" style="width: 140px; height: 40px;" role="button">Facebook Login</a></td>
@@ -23,7 +23,7 @@
                   <td><input id="button" class="btn btn-lg btn-success" type="submit" name="submit" value="LogIn"></td>
                 </tr>
               </table>
-            </form>
+            <!-- </form> -->
           </p>
           </TABLE>
 
@@ -99,3 +99,5 @@
   });
 </script>
 <!--  -->
+
+

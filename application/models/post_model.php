@@ -35,6 +35,19 @@ class Post_model extends CI_Model {
     $query = $this->db->query('SELECT * FROM blogPost');
      return $query;
     }
+    function fetch_new_posts()
+    {
+        $this->db->where('approve','0');
+        $query = $this->db->get("blogPost");
+ 
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return false;
+    }
     function record_count() {
         return $this->db->count_all("blogPost");
     }
@@ -50,4 +63,72 @@ class Post_model extends CI_Model {
         }
         return false;
    }
+
+   // **********************
+function getRecords(){
+    $query = $this->db->get('blogPost');
+     return $query;
+  } 
+
+  function save($data)
+  {
+    if(count($data)){
+        $values = implode("','", array_values($data));
+        $mysql_query="insert into blogPost (".implode(",",array_keys($data)).") values ('".$values."')";
+        $this->db->query($mysql_query);
+    return 1;
+    }
+     else return 0;  
+  } 
+
+  function delete_record($id){
+     if($id){
+        mysql_query("delete from blogPost where id = $id limit 1");
+        return mysql_affected_rows();
+     }
+  } 
+
+  function update_record($data){
+    if(count($data)){
+        $id = $data['rid'];
+        unset($data['rid']);
+        $values = implode("','", array_values($data));
+        $str = "";
+        foreach($data as $key=>$val){
+            $str .= $key."='".$val."',";
+        }
+        $str = substr($str,0,-1);
+        $sql = "update blogPost set $str where id = $id limit 1";
+
+        $res = mysql_query($sql);
+        
+        if(mysql_affected_rows())
+         return $id;
+     else
+        return 0;
+    }
+    else return 0;  
+  } 
+
+  function update_column($data){
+    if(count($data)){
+        $id = $data['rid'];
+        unset($data['rid']);
+        $sql = "update blogPost set ".key($data)."='".$data[key($data)]."' where id = $id limit 1";
+        $res = mysql_query($sql);
+        if(mysql_affected_rows()) return $id;
+        return 0;
+        
+    }   
+  }
+
+  function error($act){
+     return json_encode(array("success" => "0","action" => $act));
+  }
+
+    // **************************
+
+
+
+   
 }

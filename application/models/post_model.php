@@ -87,7 +87,13 @@ function getRecords(){
         return mysql_affected_rows();
      }
   } 
-
+  function approve_record($id){
+     if($id)
+     {
+        mysql_query("UPDATE `blogPost` SET `approve`=1 WHERE `id`=$id limit 1");
+        return mysql_affected_rows();
+     }
+  } 
   function update_record($data){
     if(count($data)){
         $id = $data['rid'];

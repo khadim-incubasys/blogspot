@@ -11,7 +11,7 @@ $(document).ready(function(){
 	// set images for edit and delete 
 	$(".eimage").attr("src",editImage);
 	$(".dimage").attr("src",deleteImage);
-	//$(".okimage").attr("src",okImage);
+	$(".aimage").attr("src",approveImage);
 
 	// init table
 	blankrow = '<tr valign="top" class="inputform"><td></td>';
@@ -33,7 +33,14 @@ $(document).ready(function(){
 				ajax("rid="+id,"del");
 		}
 	});
-
+	// approve record
+	$(document).on("click","."+approvebutton,function(){
+		var id = $(this).attr("id");
+		if(id){
+			if(confirm("Do you really want to approve record ?"))
+				ajax("rid="+id,"approve");
+		}
+	});
 	// Add new record
 	$("."+savebutton).on("click",function(){
 		var validation = 1;
@@ -215,6 +222,15 @@ ajax = function (params,action){
 					$("."+table+" tr[id='"+response.id+"']").effect("highlight",{color: '#f4667b'},500,function(){
 						$("."+table+" tr[id='"+response.id+"']").remove();
 					});
+				}
+			break;
+			case "approve":
+				var seclastRow = $("."+table+" tr").length;
+				if(response.success == 1){
+					$("."+table+" tr[id='"+response.id+"']").effect("highlight",{color: '#f4667b'},500,function(){
+						$("."+table+" tr[id='"+response.id+"']").attr( "disabled", "disabled").css( "background-color", "gray" );
+					});
+				
 				}
 			break;
 			case "update":

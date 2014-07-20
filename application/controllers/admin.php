@@ -62,6 +62,14 @@ class Admin extends CI_Controller {
 			else
 				echo $this->Post_model->error("delete");
 		}
+		else if($action == "approve"){
+			$id = $_POST['rid'];
+			$res = $this->Post_model->approve_record($id);
+			if($res)
+				echo json_encode(array("success" => "1","id" => $id));	
+			else
+				echo $this->Post_model->error("approve");
+		}
 		else if($action == "update"){
 			
 			$escapedPost = array_map('mysql_real_escape_string', $_POST);

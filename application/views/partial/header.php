@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/styles.css">
 
 <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css"); ?>">
-<link rel="stylesheet" href="<?php echo base_url("assets/css/blogspot.css"); ?>">
+
 <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-2.1.1.min.js"); ?>"></script>
 
   
@@ -37,7 +37,9 @@
 <script type="text/javascript" src="<?php echo base_url("assets/dynamicCRUD/js/jquery-ui.js"); ?>"></script>
 
 <!-- end **** -->
-
+<!-- contactus -->
+<!-- <link rel="stylesheet" href="<?php echo base_url("assets/css/contactus.css"); ?>" > -->
+<!--  -->
 <!-- dasboard -->
   <link rel="stylesheet" href="<?php echo base_url("assets/dashboard/css/layout.css"); ?>" >
   <script type="text/javascript" src="<?php echo base_url("assets/dashboard/js/hideshow.js"); ?>"></script>
@@ -54,59 +56,12 @@
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
         <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
-    <style>
-      body {
-        background: #e1c192;
-      }
-    </style>
   <!--  -->
 
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  margin-top: 10px;
-}
 
-ul {
-  margin: 0;
-}
-
-#contentWrap {
-  width: 700px;
-  margin: 0 auto;
-  height: auto;
-  overflow: hidden;
-}
-
-#contentTop {
-  width: 600px;
-  padding: 10px;
-  margin-left: 30px;
-}
-
-#contentLeft {
-  float: left;
-  width: 400px;
-}
-
-#contentLeft li {
-  list-style: none;
-  margin: 0 0 4px 0;
-  padding: 10px;
-  background-color:#00CCCC;
-  border: #CCCCCC solid 1px;
-  color:#fff;
-}
-#contentRight {
-  float: right;
-  width: 260px;
-  padding:10px;
-  background-color:#336600;
-  color:#FFFFFF;
-}
 </style>
-
+<link rel="stylesheet" href="<?php echo base_url("assets/css/blogspot.css"); ?>">
 </head>
 <body>
 <header class="navbar navbar-default navbar-" role="banner">
@@ -143,7 +98,9 @@ ul {
           <a href="#">About Us</a>
         </li>
         <li>
-          <a href="#">Contact us</a>
+          <?php
+          echo '<a href='.base_url().'contactus/index>Contact Us</a>';
+          ?>
         </li>
       </ul>
       <ul class="nav navbar-right navbar-nav">

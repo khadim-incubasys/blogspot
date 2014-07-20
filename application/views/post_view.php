@@ -81,29 +81,39 @@ foreach ($images->result_array() as $img)
 
 <form action="<?= base_url();?>post/addComment" method="post">
 <div  style='margin:40px 0px 30px 180px;'>
-<Strong>Add new Comment:</Strong><br />
 			<table style='width:80%; border-collapse:separate; border:1px solid #aaa;' class='sc_rc'>
 				<tr>
-					<td valign='top' style='width:70px; padding:5px; border-right:1px solid #aaa;background-image: -webkit-linear-gradient(top,#e3e3e3,#efefef);background-image: linear-gradient(to bottom, #E3E3E3, #EFEFEF); border-bottom-left-radius: 5px; border-top-left-radius: 5px;'>
+					<!-- <td valign='top' style='width:70px; padding:5px; border-right:1px solid #aaa;background-image: -webkit-linear-gradient(top,#e3e3e3,#efefef);background-image: linear-gradient(to bottom, #E3E3E3, #EFEFEF); border-bottom-left-radius: 5px; border-top-left-radius: 5px;'>
 						<img src='//www.gravatar.com/avatar/266f5dcea9a18816f5c361e4f2da684d?s=90' class='sc_rc' style='max-width:50px; margin-right:10px;display:block;' />
 						<div>
 						
 						
-					</td>
+					</td> -->
 					<td valign='top' style='padding:5px; background:#fff; border-bottom-right-radius: 5px; border-top-right-radius: 5px;'>
 						<!-- <div style='float:right;margin:0px 0px 15px 15px;font-size:12px;color:#aaa'>2014-03-06 7:37 am
 						</div> -->
 				        <div>
 				            <input type="hidden" value="<?= $post_id; ?>" name = "postid"> 
-							<textarea name="comment" id="comment" style='width:700px; padding:5px; border-to:0px'>
+				            <fieldset>
+									<label>Write Comment</label>
+									<textarea rows="12" name="comment" id="comment"></textarea>
+							</fieldset>
+							<!-- <textarea name="comment" id="comment" comment>
 							Hey... say something!
-							</textarea><br />
+							</textarea><br /> -->
 						</div>			
 					</td>
 				</tr>
 			</table>
 
-<input type="submit" style=" float:right;margin-right:170px;" value="Add comment" />
+						<div class="submit_link" style=" float:right;margin-right:190px;">
+							<select>
+								<option>Draft</option>
+								<option>Published</option>
+							</select>
+							<input type="submit" value="Publish" class="alt_btn">
+							<!-- <input type="submit" value="Reset"> -->
+						</div>
 		</div>
 </form>
 

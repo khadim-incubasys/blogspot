@@ -130,12 +130,14 @@
 	 var editbutton = "ajaxEdit";
 	 var updatebutton = "ajaxUpdate";
 	 var cancelbutton = "cancel";
+   var approvebutton = "ajaxApprove";
 	 
 	 var saveImage = "<?php echo base_url('assets/dynamicCRUD/images/save.png'); ?>"
 	 var editImage = "<?php echo base_url('assets/dynamicCRUD/images/edit.png'); ?>"
 	 var deleteImage ="<?php echo base_url('assets/dynamicCRUD/images/remove.png'); ?>" 
 	 var cancelImage ="<?php echo base_url('assets/dynamicCRUD/images/back.png'); ?>" 
 	 var updateImage ="<?php echo base_url('assets/dynamicCRUD/images/save.png'); ?>" 
+    var approveImage ="<?php echo base_url('assets/dashboard/images/approve.png'); ?>" 
 
 	 // Set highlight animation delay (higher the value longer will be the animation)
 	 var saveAnimationDelay = 3000; 
@@ -162,8 +164,7 @@
 				</tr> 
 			</thead> 
 			<tbody> 
-				<tr> 
-   					<!-- <td><input type="checkbox"></td>  -->
+				<!-- <tr> 
     				<td>Lorem Ipsum Dolor Sit Amet</td> 
     				<td>Articles</td> 
     				
@@ -171,9 +172,9 @@
     				<td>
     				<input type="image" src="<?php echo base_url('assets/dashboard/images/icn_edit.png'); ?>" title="Edit">
     				<input type="image" src="<?php echo base_url('assets/dashboard/images/icn_trash.png'); ?>" title="Trash">
-    				<input type="image" src="<?php echo base_url('assets/dashboard/images/icn_alert_success.png'); ?>" title="Trash">
+    				<input type="image" src="<?php echo base_url('assets/dashboard/images/approve.png'); ?>" title="Approve" style="width:30px; height:30px;">
     				</td> 
-				</tr>
+				</tr> -->
 				<?php
 					foreach ($query as $row)
 					{ ?>
@@ -182,9 +183,9 @@
 						<td class="fname"><?php echo $row->blogid; ?></td>
 						<td>5td April 2011</td>
 						<td>
-							<a href="javascript:;" id="<?php echo $row->id;?>" class="ajaxEdit"><img src="<?php echo base_url('assets/dashboard/images/icn_edit.png'); ?>" class="eimage"></a>
+							<!-- <a href="javascript:;" id="<?php echo $row->id;?>" class="ajaxEdit"><img src="<?php echo base_url('assets/dashboard/images/icn_edit.png'); ?>" class="eimage"></a> -->
 							<a href="javascript:;" id="<?php echo $row->id;?>" class="ajaxDelete"><img src="<?php echo base_url('assets/dashboard/images/icn_trash.png'); ?>" class="dimage"></a>
-							<a href="javascript:;" id="<?php echo $row->id;?>" class="ajaxDelete"><img src="<?php echo base_url('assets/dashboard/images/icn_alert_success.png'); ?>" class="okimage"></a>
+				<a href="javascript:;" id="<?php echo $row->id;?>" class="ajaxApprove"><img src="<?php echo base_url('assets/dashboard/images/approve.png'); ?>" class="aimage" style="width:30px; height:30px;"></a>
 							<!-- <input type="image" src="<?php echo base_url('assets/dashboard/images/icn_edit.png'); ?>" title="Edit">
 			    				<input type="image" src="<?php echo base_url('assets/dashboard/images/icn_trash.png'); ?>" title="Trash">
 			    			 -->	

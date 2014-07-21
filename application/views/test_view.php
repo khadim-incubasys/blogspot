@@ -1,23 +1,6 @@
-
-
-<form method="post" action="whatever.rb" name="myform" data-validate="parsley">
-  <label for="text-field">Enter text</label>
-  <input type="text" name="text" id="text-field" value="" data-required="true" />
-  
-  <label for="email">Enter email</label>
-  <input name="email" type="email" id="email" value="" data-required="true" data-type="email" />
-
-  <button type="submit" id="submit">Submit</button>
-
-
-
-
-
-
-
-
-
-
+<?php
+   echo '<a href='.base_url().'test/buildPaymentRequest>New Post</a>';
+?>
 
 <!-- <form action="signUp" method="post" id="register-form" novalidate="novalidate">
  

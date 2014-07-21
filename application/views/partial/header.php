@@ -28,9 +28,9 @@
 <!-- end op parsley -->
 
 <!-- sitep piont form validation --><!-- ************** -->
-<!-- <link rel="stylesheet" href="<?php echo base_url("assets/formsValidation/formvalid.css"); ?>">
+<link rel="stylesheet" href="<?php echo base_url("assets/formsValidation/formvalid.css"); ?>">
 <script type="text/javascript" src="<?php echo base_url("assets/formsValidation/form.js"); ?>"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
 
 <!-- end   -->
 <!-- for drag drop sort -->
